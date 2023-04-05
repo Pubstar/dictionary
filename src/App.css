@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid rgba(172, 0, 80, 0.164);
+  padding-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: rgb(172, 0, 80);
+  font-style: italic;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input {
+  border-radius: 10px;
+  background-image: url('./images/magnifying-glass.svg');
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position-x: 95%;
+  background-position-y: center;
+  width: 350px;
+  padding: 10px 40px 10px 10px;
+}
+
+.searchButton {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(172, 0, 80);
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  margin-left: 20px;
+}
+
+#playButton {
+  cursor: pointer;
+}
+
+section {
+  padding: 50px;
+  padding-inline: 500px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(172, 0, 80, 0.164);
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+h3 {
+  color: grey;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: rgb(172, 0, 80);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+main {
+  max-width: 1sw;
+}
+
+@media only screen and (max-width: 1600px) {
+  section {
+    padding-inline: 50px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 600px) {
+  input {
+    width: 100px;
   }
 }
