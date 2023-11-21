@@ -15,7 +15,8 @@ function App() {
     await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`)
       .then(res => res.json())
       .then(data => {
-        setData(data);
+        if(data[0].word) setData(data);
+        else setData('Word not found');
         console.log(data);
       });
   }
